@@ -1,0 +1,57 @@
+.window{
+  padding: 0px;
+  background-color: $window-default-bg;
+  position : absolute;
+  opacity: .9;
+
+  >.window-header {
+    :active{
+      cursor : move;
+    }
+    >button.close{
+      float : left;
+    }
+  }
+
+  &.window-default{
+    min-width: $window-default-size;
+    min-height: $window-default-size;
+    border : $window-default-border;
+    border-radius: $window-default-border-radius;
+
+    >.window-header{
+      background-color: $window-default-header-bg;
+      border-bottom : $window-default-border;
+      margin-top: -10px;
+      padding-left: $window-default-header-pd;
+      padding-right: $window-default-header-pd;
+      height : $window-default-header-height;
+      text-align: center;
+
+      >h4{
+        padding-top : 3px;
+      }
+    }
+
+    >.window-body{
+      padding : 5px;
+      -webkit-filter: blur(20px);
+      -moz-filter: blur(15px);
+      -o-filter: blur(15px);
+      -ms-filter: blur(15px);
+      filter: blur(15px);
+      opacity: 0.95;
+    }
+
+    >.window-footer{
+      bottom: 0px;
+      position: absolute;
+      background-color: $window-default-footer-bg;
+      border-top : $window-default-border;
+      padding-left: $window-default-footer-pd;
+      padding-right: $window-default-footer-pd;
+      height : $window-default-footer-height;
+      width: 100%;
+    }
+  }
+}

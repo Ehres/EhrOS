@@ -37,6 +37,11 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/jquery.ui/ui/jquery.ui.core.js"></script>
+    <script src="bower_components/jquery.ui/ui/jquery.ui.widget.js"></script>
+    <script src="bower_components/jquery.ui/ui/jquery.ui.mouse.js"></script>
+    <script src="bower_components/jquery.ui/ui/jquery.ui.draggable.js"></script>
+    <script src="bower_components/jquery.ui/ui/jquery.ui.resizable.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/sass-bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -48,11 +53,16 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/main_controller.js"></script>
         <script src="scripts/controllers/menu_controller.js"></script>
         <script src="scripts/controllers/working_space_controller.js"></script>
         <script src="scripts/controllers/footer_controller.js"></script>
-        <script src="scripts/directives/window.js"></script>
+        <script src="scripts/directives/window_directive.js"></script>
+        <script src="scripts/services/window_service.js"></script>
+        <script src="scripts/models/window_model.js"></script>
+        <script src="scripts/directives/resizable_directive.js"></script>
+        <script src="scripts/directives/draggable_directive.js"></script>
+        <script src="scripts/controllers/window_controller.js"></script>
         <!-- endbuild -->
 </body>
 </html>
