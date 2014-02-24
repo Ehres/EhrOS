@@ -5,7 +5,7 @@ angular.module('ehrOsApp')
     @windows = []
 
     newWindow : (options)=>
-      newWindow = new AppWindow options
+      newWindow = new WebWindow options
       body = $("body")
       newWindow.position =
         x : body.width() / 2 - newWindow.width / 2 + "px"
