@@ -8,10 +8,6 @@ angular.module('ehrOsApp')
       ngModel : "="
 
     link    : (scope, element, attrs) ->
-#
-#            scope.window.position.x = element[0].offsetLeft
-#            scope.window.position.y = element[0].offsetTop
-      console.log scope
       startX = 0
       startY = 0
       x = 0

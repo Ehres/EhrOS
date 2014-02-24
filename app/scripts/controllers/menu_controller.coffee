@@ -1,9 +1,9 @@
 'use strict'
 
 angular.module('ehrOsApp')
-  .controller 'menu_controller', ($scope, $appWindow) ->
+  .controller 'menu_controller', ($scope, $windowManager) ->
 
     $scope.newWindow = ->
-      $appWindow.newWindow
+      $windowManager.newWindow
         title : "mon titre"
         content : "mon contenu test"
