@@ -42,14 +42,22 @@ module.exports = function (grunt) {
       gruntfile: {
         files: ['Gruntfile.js']
       },
+      jade: {
+        files:  [
+            'views/*.jade',
+            'views/**/*.jade'
+        ],
+        tasks: 'jade reload'
+      },
       livereload: {
         options: {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '<%= yeoman.app %>/{,*/}*.html',
+//          '<%= yeoman.app %>/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
           '.tmp/scripts/{,*/}*.js',
+          '.tmp/views/{,*/}*.html',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
@@ -88,7 +96,18 @@ module.exports = function (grunt) {
         }
       }
     },
-
+    jade: {
+        html: {
+            files: {
+                '<%= yeoman.dist %>views/': ['<%= yeoman.app %>views/*.jade', '<%= yeoman.app %>views/**/*.jade']
+            },
+            options: {
+                basePath: 'jade/',
+                pretty: true,
+                client: false
+            }
+        }
+    },
     // Make sure code styles are up to par and there are no obvious mistakes
     jshint: {
       options: {
