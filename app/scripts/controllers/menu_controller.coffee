@@ -7,3 +7,31 @@ angular.module('ehrOsApp')
       $windowManager.newWindow
         title : "mon titre"
         content : "mon contenu test"
+        menus : [
+          title: "file"
+          menuItems:[
+            title:"open"
+            isSubTitle : false
+            action : "coucou"
+          ,
+            title:"open2"
+            isSubTitle : false
+            action : "coucou2"
+          ]
+        ,
+          title: "edit"
+          menuItems:[
+            title:"open3"
+            isSubTitle : false
+            action : "coucou3"
+          ,
+            title:"open3"
+            isSubTitle : false
+            action : "coucou3"
+          ]
+        ]
+
+    $scope.menuItems = $windowManager.getMenuActiveWindow() or [{title : "coucou"}]
+
+    $scope.$watch 'menuItems', ->
+      console.log $scope.menuItems

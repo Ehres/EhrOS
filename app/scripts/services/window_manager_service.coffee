@@ -18,3 +18,6 @@ angular.module('ehrOsApp')
 
     close : (window)=>
       @windows.splice @windows.indexOf(window), 1
+
+    getMenuActiveWindow : =>
+      @windows[0]?.menus
