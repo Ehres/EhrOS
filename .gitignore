@@ -4,3 +4,8 @@ dist
 .sass-cache
 .idea
 app/bower_components
+
+npm-debug.log
+scripts
+
+.idea/EhrOS.iml
