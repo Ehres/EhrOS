@@ -4,7 +4,7 @@ angular.module('ehrOsApp')
   .service '$windowManager', () ->
     @windows = []
 
-    newWindow : (options)=>
+    newWindow = (options)=>
       newWindow = new WebWindow options
       body = $("body")
       newWindow.position =
@@ -13,11 +13,14 @@ angular.module('ehrOsApp')
 
       @windows.push newWindow
 
-    getWindows : =>
+    getWindows = =>
       @windows
 
-    close : (window)=>
+    close = (window)=>
       @windows.splice @windows.indexOf(window), 1
 
-    getMenuActiveWindow : =>
+    getMenuActiveWindow = =>
       @windows[0]?.menus
+
+    getNameActiveWindow = =>
+      @windows[0]?.title

@@ -3,6 +3,10 @@
 angular.module('ehrOsApp')
   .controller 'menu_controller', ($scope, $windowManager) ->
 
+    $scope.menuItems = $windowManager.getMenuActiveWindow() or [{title : "coucou"}]
+    
+    $scope.name = $windowManager.getNameActiveWindow()
+
     $scope.newWindow = ->
       $windowManager.newWindow
         title : "mon titre"
@@ -30,8 +34,6 @@ angular.module('ehrOsApp')
             action : "coucou3"
           ]
         ]
-
-    $scope.menuItems = $windowManager.getMenuActiveWindow() or [{title : "coucou"}]
 
     $scope.$watch 'menuItems', ->
       console.log $scope.menuItems

@@ -1,45 +1,49 @@
 {
-    "name"          : "EhrOS",
-    "description"   : "WebApp of operating system appearance",
-    "version"       : "0.0.1",
-    "author"        : {
-        "name"  : "Maxime Grébauval",
-        "email" : "maxime.grebauval@icloud.com"
-    },
-    "repository": {
-        "type"  : "git",
-        "url"   : "https://github.com/Ehres/EhrOS.git"
-    },
-    "licenses": [{
-            "type": "MIT"
-        }
-    ],
-    "ignore": [
-        "docs",
-        "test",
-        "CONTRIBUTING.md"
-    ],
-    "dependencies": {
-        "angular"           : "1.2.6",
-        "json3"             : "~3.2.6",
-        "es5-shim"          : "~2.1.0",
-        "jquery"            : "~1.10.2",
-        "sass-bootstrap"    : "~3.0.2",
-        "angular-resource"  : "1.2.6",
-        "angular-cookies"   : "1.2.6",
-        "angular-sanitize"  : "1.2.6",
-        "angular-route"     : "1.2.6"
-    },
-    "devDependencies": {
-        "angular-animate"   : "~1.2.10",
-        "angular-i18n"      : "~1.2.10",
-        "angular-mocks"     : "~1.2.10",
-        "angular-motion"    : "~0.3.1",
-        "angular-route"     : "~1.2.10",
-        "angular-sanitize"  : "~1.2.10",
-        "angular-scenario"  : "~1.2.10",
-        "fastclick"         : "~0.6.11",
-        "font-awesome"      : "~4.0.3",
-        "highlightjs"       : "~8.0.0"
+  "name": "EhrOS",
+  "description": "WebApp of operating system appearance",
+  "version": "0.0.1",
+  "author": {
+    "name": "Maxime Grébauval",
+    "email": "maxime.grebauval@icloud.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ehres/EhrOS.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
     }
+  ],
+  "ignore": [
+    "docs",
+    "test",
+    "CONTRIBUTING.md"
+  ],
+  "dependencies": {
+    "angular": "1.2.6",
+    "json3": "~3.2.6",
+    "es5-shim": "~2.1.0",
+    "jquery": "~1.10.2",
+    "sass-bootstrap": "~3.0.2",
+    "angular-resource": "1.2.6",
+    "angular-cookies": "1.2.6",
+    "angular-sanitize": "1.2.6",
+    "angular-route": "1.2.6"
+  },
+  "devDependencies": {
+    "angular-animate": "~1.2.10",
+    "angular-i18n": "~1.2.10",
+    "angular-mocks": "~1.2.10",
+    "angular-motion": "~0.3.1",
+    "angular-route": "~1.2.10",
+    "angular-sanitize": "~1.2.10",
+    "angular-scenario": "~1.2.10",
+    "fastclick": "~0.6.11",
+    "font-awesome": "~4.0.3",
+    "highlightjs": "~8.0.0"
+  },
+  "resolutions": {
+    "angular": "1.2.6"
+  }
 }

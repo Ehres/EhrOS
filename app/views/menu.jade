@@ -1,8 +1,9 @@
 .menu-bar(ng-controller="menu_controller")
-    nav.navbar.navbar-default.navbar-fixed-top(role="navigation")
-        ul.nav.navbar-nav
-            li: a(href="#")
-                .glyphicon.glyphicon-off
-            li: a(href="#", ng-click="newWindow()")
-                .glyphicon.glyphicon-new-window
-            li(ng-repeat="item in menuItems"): a(href="#") {{item.title}}
+	nav.navbar.navbar-default.navbar-fixed-top(role="navigation")
+		ul.nav.navbar-nav
+			li: a(href="#")
+				.glyphicon.glyphicon-off
+			li: a(href="#", ng-click="newWindow()")
+				.glyphicon.glyphicon-new-window
+			//- li: a(href="#") {{name}}
+			li(ng-repeat="item in menuItems"): a(href="#") {{item.title}}

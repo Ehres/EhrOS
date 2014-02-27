@@ -43,11 +43,8 @@ module.exports = function (grunt) {
         files: ['Gruntfile.js']
       },
       jade: {
-        files:  [
-            'views/*.jade',
-            'views/**/*.jade'
-        ],
-        tasks: 'jade reload'
+        files: ['<%= yeoman.app %>/{,*/}*.jade'],
+        tasks: ['jade']
       },
       livereload: {
         options: {
@@ -97,16 +94,18 @@ module.exports = function (grunt) {
       }
     },
     jade: {
-        html: {
-            files: {
-                '<%= yeoman.dist %>views/': ['<%= yeoman.app %>views/*.jade', '<%= yeoman.app %>views/**/*.jade']
-            },
-            options: {
-                basePath: 'jade/',
-                pretty: true,
-                client: false
-            }
-        }
+      dist: {
+        options: {
+          pretty: true
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>/views',
+          dest: '.tmp/views',
+          src: '*.jade',
+          ext: '.html'
+        }]
+      }
     },
     // Make sure code styles are up to par and there are no obvious mistakes
     jshint: {
@@ -341,6 +340,7 @@ module.exports = function (grunt) {
     concurrent: {
       server: [
         'coffee:dist',
+        'jade:dist',
         'compass:server'
       ],
       test: [
@@ -422,6 +422,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'bower-install',
+    'jade',
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
