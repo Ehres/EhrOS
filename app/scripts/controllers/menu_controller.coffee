@@ -3,12 +3,11 @@
 angular.module('ehrOsApp')
   .controller 'menu_controller', ($scope, $windowManager) ->
 
-    $scope.menuItems = $windowManager.getMenuActiveWindow() or [{title : "coucou"}]
-    
-    $scope.name = $windowManager.getNameActiveWindow()
+    $scope.menuItems  = $windowManager.getMenuActiveWindow()
+    $scope.name       = $windowManager.getNameActiveWindow()
 
     $scope.newWindow = ->
-      $windowManager.newWindow
+      $windowManager.create
         title : "mon titre"
         content : "mon contenu test"
         menus : [
