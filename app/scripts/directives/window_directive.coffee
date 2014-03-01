@@ -1,15 +1,15 @@
 'use strict'
 
 angular.module('ehrOsApp')
-  .directive('window', () ->
-    templateUrl : 'views/window.html'
+  .directive('webWindow', () ->
+    templateUrl : 'views/webWindow.html'
     replace     : true
     restrict    : 'E'
-    controller  : "window_controller"
+    controller  : "web_window_controller"
     link        : (scope, element, attrs) ->
       $(element).css
-        left    : scope.window.position.x
-        top     : scope.window.position.y
-        width   : scope.window.width
-        height  : scope.window.height
+        left    : scope.webWindow.position.x
+        top     : scope.webWindow.position.y
+        width   : scope.webWindow.width
+        height  : scope.webWindow.height
   )

@@ -1,15 +1,16 @@
 'use strict'
 
 angular.module('ehrOsApp')
-  .service '$windowManager', () ->
-    @windows = []
-    @activeWindow = 0
+  .service '$windowManager', ($util) ->
+    @windows          = []
+    @activeWebWindow  = 0
 
-    @getWindows = =>
+    @getWebWindows = =>
       @windows
 
     @create = (options)=>
       newWindow = new WebWindow options
+      newWindow.id = $util.uniqueId
       body = $ "body"
       newWindow.position =
         x : body.width() / 2 - newWindow.width / 2 + "px"
@@ -21,9 +22,12 @@ angular.module('ehrOsApp')
       @windows.splice @windows.indexOf(window), 1
 
     @getMenuActiveWindow = =>
-      @windows[@activeWindow]?.menus
+      @windows[@activeWebWindow]?.menus
 
     @getNameActiveWindow = =>
-      @windows[@activeWindow]?.title
+      @windows[@activeWebWindow]?.title
+
+    @setActiveWebWindow = (idWebWindow)=>
+      @activeWebWindow = idWebWindow
 
     @

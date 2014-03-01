@@ -3,34 +3,43 @@
 angular.module('ehrOsApp')
   .controller 'menu_controller', ($scope, $windowManager) ->
 
-    $scope.menuItems  = $windowManager.getMenuActiveWindow()
-    $scope.name       = $windowManager.getNameActiveWindow()
+    $scope.menuItems      = $windowManager.getMenuActiveWindow()
+    $scope.webWindowName  = $windowManager.getNameActiveWindow()
 
     $scope.newWindow = ->
       $windowManager.create
-        title : "mon titre"
+        title   : "Window"
         content : "mon contenu test"
         menus : [
-          title: "file"
-          menuItems:[
-            title:"open"
-            isSubTitle : false
-            action : "coucou"
+          title     : "File"
+          menuItems :[
+            index   : 0
+            title   : "open"
+            action  : "coucou"
           ,
-            title:"open2"
-            isSubTitle : false
-            action : "coucou2"
+            index   : 1
+            title   : "save"
+            action  : "coucou2"
+          ]
+          subMenu   :[
+            index     : 0
+            title     : "test"
+            menuItems : [
+              index  : 0
+              title  : "subTest"
+              action : "subTestaction"
+            ]
           ]
         ,
-          title: "edit"
-          menuItems:[
-            title:"open3"
-            isSubTitle : false
-            action : "coucou3"
+          title     : "Edit"
+          menuItems :[
+            index   : 0
+            title   : "copy"
+            action  : "coucou3"
           ,
-            title:"open3"
-            isSubTitle : false
-            action : "coucou3"
+            index   : 1
+            title   : "cut"
+            action  : "coucou3"
           ]
         ]
 

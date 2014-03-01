@@ -1,6 +1,10 @@
 'use strict'
 
 angular.module('ehrOsApp')
-  .controller 'window_controller', ($scope, $windowManager) ->
+  .controller 'web_window_controller', ($scope, $windowManager) ->
     $scope.close = ->
-      $windowManager.close $scope.window
+      $windowManager.close $scope.webWindow
+
+    $scope.setFocus = ->
+        $windowManager.setActiveWebWindow $scope.webWindow.id
+    @

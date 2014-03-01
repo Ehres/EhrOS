@@ -1,6 +1,7 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
-@import 'bootstrap/import';
+@import "../bower_components/font-awesome/scss/font-awesome";
+@import "bootstrap/import";
 @import "_variables";
 @import "_window";
 

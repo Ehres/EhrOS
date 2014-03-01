@@ -1,0 +1,10 @@
+.window.window-default(ng-draggable, ng-resizable, ng-model="webWindow", ng-mousedown="setFocus()")
+    .transparent-bg
+    .window-header
+        button.close(type="button", ng-click="close()") &times;
+        h4 {{webWindow.title}}
+
+    .window-body
+        | {{webWindow.content}}
+
+    .window-footer
